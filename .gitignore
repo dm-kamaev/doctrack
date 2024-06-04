@@ -5,8 +5,8 @@ core/coverage
 dist/
 
 *.zip
-input/
-output/
+/input/
+/output/
 example_doctrack/
 
 test/output/*

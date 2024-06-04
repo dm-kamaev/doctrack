@@ -6,8 +6,8 @@ import stream from 'node:stream';
 import { DocTrack, Docx, Docm, Dotm, Dotx, Xlsx, Xlsm, Xltm, Xltx } from '../src/index';
 
 describe('[DocTrack]: different input data', () => {
-  afterEach(() => {
-    // jest.clearAllMocks();
+  afterAll(() => {
+    removeOutputFiles('./output', /(docx|docm|dotm|dotx|xlsx|xlsm|xltm|xltx)$/);
   });
 
   test.each([
@@ -63,8 +63,8 @@ describe('[DocTrack]: different input data', () => {
 });
 
 describe('[DocTrack]: different output data', () => {
-  afterEach(() => {
-    // jest.clearAllMocks();
+  afterAll(() => {
+    removeOutputFiles('./output', /(docx|docm|dotm|dotx|xlsx|xlsm|xltm|xltx)$/);
   });
 
   test.each([
@@ -118,3 +118,17 @@ describe('[DocTrack]: different output data', () => {
     expect(stream.isReadable(streamOutput)).toBe(true);
   });
 });
+
+function removeOutputFiles(folderPath: string, regExpExtenstion: RegExp) {
+  // Read the files in the folder
+  const files = fs.readdirSync(path.join(__dirname, folderPath));
+
+  // Filter the files by mask
+  const filesToRemove = files.filter((fileName) => regExpExtenstion.test(fileName));
+
+  // Remove the files
+  filesToRemove.forEach((file) => {
+    const filePath = path.join(__dirname, folderPath, file);
+    fs.unlinkSync(filePath);
+  });
+}

@@ -10,5 +10,5 @@ jobs:
         with:
           node-version: '20'
       - run: npm i -D
-      - run: make build
+      - run: make ci
       - run: echo "🍏 This job's status is ${{ job.status }}."

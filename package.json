@@ -1,28 +1,31 @@
 {
   "name": "doctrack",
   "version": "1.0.0",
-  "description": "Library for CQRS/CQS. Implementation of mediator analogue MediatR in .NET",
-  "types": "dist/index.d.ts",
-  "main": "dist/index.js",
+  "description": "Library for injecting tracking (spy) pixel url into Office Documents (Office Open XML)",
+  "types": "dist/src/index.d.ts",
+  "main": "dist/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "make build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dm-kamaev/mediator-r.git"
+    "url": "https://github.com/dm-kamaev/doctrack.git"
   },
   "keywords": [
-    "mediator-r",
-    "mediator-R",
-    "mediatorR",
-    "cqrs",
-    "cqs",
-    "command",
-    "query",
-    "bus",
-    "message",
-    "ddd"
+    "doctrack",
+    "tracking pixel",
+    "tracking pixel url",
+    "spy url",
+    "office open xml",
+    "docx",
+    "docm",
+    "dotm",
+    "dotx",
+    "xlsx",
+    "xlsm",
+    "xltm",
+    "xltx"
   ],
   "author": "dm-kamaev@rambler.ru",
   "license": "ISC",
@@ -32,11 +35,11 @@
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.0",
+    "@types/node": "20.14.0",
     "@types/xml2js": "0.4.14",
     "@typescript-eslint/eslint-plugin": "^7.12.0",
-    "@typescript-eslint/parser": "^7.12.0",
-    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "7.12.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-new-with-error": "4.0.0",
     "eslint-plugin-no-unsafe-regex": "1.0.0",
@@ -46,7 +49,7 @@
     "jest": "29.7.0",
     "jest-coverage-badges": "1.1.2",
     "prettier": "3.2.5",
-    "ts-jest": "^29.1.4",
+    "ts-jest": "29.1.4",
     "tsx": "4.11.0",
     "typescript": "5.4.5"
   }

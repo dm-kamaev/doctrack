@@ -5,19 +5,6 @@ import Injector from './Injector';
 import JSZip from 'jszip';
 import type { Document } from './Document';
 
-// const inputFile = './test.docx';
-// // const inputFile = './test_dotx.dotx';
-// // const inputFile = './empty.docx';
-// // const inputFile = './test_with_image.docx';
-// // const inputFile = './manual_result.docx';
-// // const inputFile = './output.docx';
-// // const outputFile = './manual_result.dotx';
-// const outputFile = './output.docx';
-// const imageUrl = 'http://localhost:5001/image.png';
-// // const imageUrl = 'http://localhost:5001/image2.png';
-
-// appendImageToDocx(inputFile, outputFile, imageUrl).catch(console.error);
-
 export default class WorkBookInjector extends Injector {
   constructor(
     private readonly _document: Document,

@@ -1,0 +1,13 @@
+node_modules
+
+core/coverage
+
+dist/
+
+*.zip
+input/
+output/
+example_doctrack/
+
+test/output/*
+!test/output/.gitkeep
